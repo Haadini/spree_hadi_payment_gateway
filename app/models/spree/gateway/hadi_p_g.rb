@@ -2,7 +2,6 @@ module Spree
 	class Gateway::HadiPG < PaymentMethod
 
 		def provider_calss
-	
 		end
 		def refund(payment, amount)
       refund_type = payment.amount == amount.to_f ? "Full" : "Partial"
