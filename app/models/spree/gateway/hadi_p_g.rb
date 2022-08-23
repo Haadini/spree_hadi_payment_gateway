@@ -1,10 +1,10 @@
 module spree
-	class Gateway::HadiPG < PaymentMethod
+class Gateway::HadiPG < PaymentMethod
 
-	def provider_calss
+def provider_calss
 	
-	end
-	def refund(payment, amount)
+end
+def refund(payment, amount)
       refund_type = payment.amount == amount.to_f ? "Full" : "Partial"
       refund_transaction = provider.build_refund_transaction({
         :TransactionID => payment.source.transaction_id,
