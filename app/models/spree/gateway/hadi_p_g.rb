@@ -1,4 +1,4 @@
-module spree
+module Spree
 	class Gateway::HadiPG < PaymentMethod
 
 		def provider_calss
