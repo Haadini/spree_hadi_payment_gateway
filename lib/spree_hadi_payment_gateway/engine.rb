@@ -19,7 +19,7 @@ module SpreeHadiPaymentGateway
       end
     end
         
-    ::Rails.app.config.spree.payment_methods << Spree::Gateway::HadiPG
+    ::Rails.application.config.spree.payment_methods << Spree::Gateway::HadiPG
     
     config.to_prepare(&method(:activate).to_proc)
 
