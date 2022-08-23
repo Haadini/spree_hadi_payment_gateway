@@ -18,15 +18,12 @@ module SpreeHadiPaymentGateway
         Rails.configuration.cache_classes ? require(c) : load(c)
       end
     end
-        
-    ::Rails.application.config.spree.payment_methods << Spree::Gateway::HadiPG
-    
+            
     config.to_prepare(&method(:activate).to_proc)
 
-=begin
+
     initializer "spree.hadi_payment_gateway.payment_methods", :after => "spree.register.payment_methods" do |app|
       app.config.spree.payment_methods << Spree::Gateway::HadiPG
     end
-=end
   end
 end
