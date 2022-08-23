@@ -1,1 +1,0 @@
-# spree_hadi_payment_gateway
